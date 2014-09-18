@@ -1,0 +1,7 @@
+int  alex;
+alex = 3.0;
+alex = 3 + 3;
+alex = 4 * 4 + 3a3;
+int alex1, alex2, alex3;
+boolean bol1, bol2 , bol3;
+bol1 = true;

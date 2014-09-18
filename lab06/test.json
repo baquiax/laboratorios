@@ -1,0 +1,21 @@
+{
+	"nombre": "Homero J",
+	"apellido": "Simpson",
+	"age": 37,
+	"direccion": {
+		"calle": "Avenida Siempre Viva 17-42",
+		"ciudad": "Springfield",
+		"pais": "Estados Unidos de Norte America",
+		"codigoPostal": "1513"
+	},
+	"numeroTelefonico": [
+		{
+			"tipo": "casa",
+			"numero": "0555-1234"
+		},
+		{
+			"tipo": "fax",
+			"numero": "0555-4567"
+		}
+	]
+}
