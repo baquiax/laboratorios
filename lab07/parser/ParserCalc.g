@@ -18,7 +18,7 @@ e : e MULT e 	{System.out.println("Mult");} #mult|
 	e AND e 	#and|
 	e POW e 	#pow|
 	n 			#number|
-	VAR_NAME 	#varName;
+	VAR_NAME 	{System.out.println("VAR_NAME");} #varName;
 
 n:	INTEGER {System.out.println("INTEGER");} #integer|
 	FLOAT	#float|
@@ -26,10 +26,10 @@ n:	INTEGER {System.out.println("INTEGER");} #integer|
 
 a:	VAR_NAME EQUAL e #assign;
 
-type:	INTEGER_TYPE #intType |
-		FLOAT_TYPE	#floatType |
-		BOOLEAN_TYPE #booleanType;
+type:	INTEGER_TYPE {System.out.println("TYPE int");} #intType |
+		FLOAT_TYPE	{System.out.println("TYPE float");} #floatType |
+		BOOLEAN_TYPE {System.out.println("TYPE boolean");} #booleanType;
 
-dec_list:	(type VAR_NAME )(COMMA VAR_NAME)* EOL {System.out.println("decList");} #decList;
+dec_list:	type VAR_NAME (COMMA VAR_NAME)* EOL {System.out.println("decList");} #decList;
 
 exp_list:	(e|a) EOL  {System.out.println("expList");} #expList;
