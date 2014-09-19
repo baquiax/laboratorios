@@ -5,6 +5,10 @@ import java.util.LinkedList;
 
 public class Root extends Node {
     private List<Node> list;
+    
+    public Root () {
+	this.list = new LinkedList<Node>();
+    }
 
     public void add(Node node) {
 	this.list.add(node);

@@ -8,9 +8,9 @@ options {
     package laboratorios.lab07.parser;
 }
 
-start:	(dec_list+ | exp_list+)+ #program;
+start:	(dec_list+ | exp_list+)+  {System.out.println("Program");} #program;
 
-e : e MULT e 	#mult|
+e : e MULT e 	{System.out.println("Mult");} #mult|
 	e DIV e 	#div|
 	e ADD e 	#add|
 	e SUB e 	#sub|
@@ -20,7 +20,7 @@ e : e MULT e 	#mult|
 	n 			#number|
 	VAR_NAME 	#varName;
 
-n:	INTEGER #integer|
+n:	INTEGER {System.out.println("INTEGER");} #integer|
 	FLOAT	#float|
 	BOOLEAN #boolean;
 
@@ -30,6 +30,6 @@ type:	INTEGER_TYPE #intType |
 		FLOAT_TYPE	#floatType |
 		BOOLEAN_TYPE #booleanType;
 
-dec_list:	(type VAR_NAME )(COMMA VAR_NAME)* EOL #decList;
+dec_list:	(type VAR_NAME )(COMMA VAR_NAME)* EOL {System.out.println("decList");} #decList;
 
-exp_list:	(e|a) EOL  #expList;
+exp_list:	(e|a) EOL  {System.out.println("expList");} #expList;

@@ -17,6 +17,7 @@ public class Lab07 {
 	ParserCalc parser = new ParserCalc(new CommonTokenStream(l));
 	ParseTree tree = parser.start();
 	AstVisitor visitor = new AstVisitor();
+	System.out.println("\n#AST#");
 	Root root = (Root) visitor.visit(tree);
 	root.print();
 	System.out.println("\n\n#END#\n");
