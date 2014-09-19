@@ -30,11 +30,16 @@ public class AstVisitor extends ParserCalcBaseVisitor<Node> {
     }
 
     @Override
+    public Node visitFloat(ParserCalc.FloatContext ctx) {
+	return new FloatLiteral(ctx.FLOAT().getText());
+    }
+
+    @Override
     public Node visitMult(ParserCalc.MultContext ctx) {
 	TerminalNode op = ctx.MULT();
 	return new BinOp(op.getText(), visit(ctx.e(0)), visit(ctx.e(1)));
     }
-    
+        
     @Override
     public Node visitDiv(ParserCalc.DivContext ctx) {
 	TerminalNode op = ctx.DIV();
@@ -49,4 +54,5 @@ public class AstVisitor extends ParserCalcBaseVisitor<Node> {
 	    return visit(ctx.a());
 	}
     }
+        
 }
