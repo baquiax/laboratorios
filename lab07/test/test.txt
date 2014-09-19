@@ -1,2 +1,2 @@
 boolean a,b,c,d;
-5 + 3 +2;
+int e,f,g,h;

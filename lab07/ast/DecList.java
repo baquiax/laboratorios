@@ -17,8 +17,8 @@ public class DecList extends Node {
     }
 
     public void print(String padding) {
-	System.out.println("dec_list -> ");
-	System.out.println(this.type);
+	System.out.println(padding + "dec_list -> ");
+	System.out.println(padding + this.type);
 	for (Node n: this.list) {
 	    n.print(padding + "\t");
 	}
