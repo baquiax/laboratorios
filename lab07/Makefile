@@ -1,13 +1,13 @@
 make: scanner/ScannerCalc.java scanner/ScannerCalc.class parser/ParserCalc.java parser/ParserCalc.class ast/AstVisitor.class Lab07.class 
 
 scanner/ScannerCalc.java: scanner/ScannerCalc.g
-	java org.antlr.v4.Tool scanner/ScannerCalc.g
+	java org.antlr.v4.Tool -o scanner scanner/ScannerCalc.g
 
 scanner/ScannerCalc.class: scanner/ScannerCalc.java
 	javac scanner/ScannerCalc.java
 
 parser/ParserCalc.java: parser/ParserCalc.g
-	java org.antlr.v4.Tool -lib scanner -visitor parser/ParserCalc.g
+	java org.antlr.v4.Tool -o parser -lib scanner -visitor parser/ParserCalc.g
 
 parser/ParserCalc.class: parser/ParserCalc.java
 	javac parser/ParserCalc.java
