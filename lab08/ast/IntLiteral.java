@@ -1,4 +1,4 @@
-package laboratorios.lab07.ast;
+package laboratorios.lab08.ast;
 
 public class IntLiteral extends Node {
     private int value;

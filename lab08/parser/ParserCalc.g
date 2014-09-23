@@ -5,7 +5,7 @@ options {
 }
 
 @parser::header {
-    package laboratorios.lab07.parser;
+    package laboratorios.lab08.parser;
 }
 
 start:	(dec_list+ | exp_list+)+  {System.out.println("Program");} #program;

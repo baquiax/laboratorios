@@ -1,4 +1,4 @@
-package laboratorios.lab07.ast;
+package laboratorios.lab08.ast;
 
 import java.util.List;
 import java.util.LinkedList;

@@ -1,6 +1,6 @@
-import laboratorios.lab07.scanner.*;
-import laboratorios.lab07.parser.*;
-import laboratorios.lab07.ast.*;
+import laboratorios.lab08.scanner.*;
+import laboratorios.lab08.parser.*;
+import laboratorios.lab08.ast.*;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
  

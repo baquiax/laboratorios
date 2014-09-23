@@ -1,7 +1,7 @@
 lexer grammar ScannerCalc;
 
 @lexer::header {
-	package laboratorios.lab07.scanner;
+	package laboratorios.lab08.scanner;
 }
 
 fragment DIGIT: [0-9];

@@ -1,4 +1,4 @@
-package laboratorios.lab07.ast;
+package laboratorios.lab08.ast;
 
 public class Type extends Node {
     private String value;

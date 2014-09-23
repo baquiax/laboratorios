@@ -1,9 +1,9 @@
-package laboratorios.lab07.ast;
+package laboratorios.lab08.ast;
 
 import java.util.List;
 import org.antlr.v4.runtime.tree.TerminalNode;
-import laboratorios.lab07.parser.ParserCalc;
-import laboratorios.lab07.parser.ParserCalcBaseVisitor;
+import laboratorios.lab08.parser.ParserCalc;
+import laboratorios.lab08.parser.ParserCalcBaseVisitor;
 
 public class AstVisitor extends ParserCalcBaseVisitor<Node> {
     
