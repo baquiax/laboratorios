@@ -1,12 +1,11 @@
-int;
-boolean a,b,c,d;
+boolean a,b,c,d,var;
 int variable;
 int e,f,g,h;
 1 + 2 + 3;
 var = 3;
-var = var;
+var = varz;
 var = 3 + 3;
 var = 3 / 3;
 var = 3 * 3;
 var = 3 - 3;
-var = 3 ^ 3;
+vary = 3 ^ 3;

@@ -12,6 +12,14 @@ public class Assign extends Node {
     	this.expression = new LinkedList<Node>();
     }
 
+    public String getName() {
+	return this.varName;
+    }
+
+    public List<Node> getExpressions() {
+	return this.expression;
+    }    
+
     public void add(Node node) {	
 	   this.expression.add(node);
     }

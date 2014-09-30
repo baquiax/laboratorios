@@ -1,6 +1,7 @@
 import laboratorios.lab08.scanner.*;
 import laboratorios.lab08.parser.*;
 import laboratorios.lab08.ast.*;
+import laboratorios.lab08.semantic.*;
 import org.antlr.v4.runtime.*;
 import org.antlr.v4.runtime.tree.*;
  
@@ -19,6 +20,9 @@ public class Lab08 {
 	System.out.println("\n#AST#");
 	Root root = (Root) visitor.visit(tree);
 	root.print();
+	Semantic semantic = new Semantic();
+	System.out.println("\n#SEMANTIC#");
+	semantic.check(root);
 	System.out.println("\n\n#END#\n");
     }
 }

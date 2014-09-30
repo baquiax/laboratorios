@@ -7,6 +7,10 @@ public class VarName extends Node {
 	this.value = v;
     }
 
+    public String getName() { 
+	return this.value;
+    }
+
     public void print(String padding) {
 	System.out.println(padding + this.value);	
     }

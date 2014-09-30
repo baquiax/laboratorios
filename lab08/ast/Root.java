@@ -10,6 +10,10 @@ public class Root extends Node {
 	this.list = new LinkedList<Node>();
     }
 
+    public List<Node> getChilds() {
+	return this.list;
+    }
+
     public void add(Node node) {
 	this.list.add(node);
     }
@@ -24,4 +28,5 @@ public class Root extends Node {
     public void print() {
 	this.print("");
     }
+
 }

@@ -16,6 +16,14 @@ public class DecList extends Node {
 	   this.list.add(node);
     }
 
+    public List<Node> getVars() {
+	return this.list;
+    }
+
+    public String getType() {
+	return this.type;
+    }
+
     public void print(String padding) {
     	System.out.println(padding + "dec_list -> ");
     	System.out.println(padding + this.type);
