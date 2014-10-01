@@ -9,3 +9,4 @@ var = 3 / 3;
 var = 3 * 3;
 var = 3 - 3;
 vary = 3 ^ 3;
+varzzz = y + z +w;

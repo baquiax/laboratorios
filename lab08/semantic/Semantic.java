@@ -31,6 +31,10 @@ public class Semantic {
 	    if (this.st.findSymbol(var.getName()) == null) {
 		System.err.println("ERR: " + var.getName() + " isn't defined!");
 	    }
+	} else if (n.getClass().getName().equals("laboratorios.lab08.ast.BinOp")) {
+	    BinOp op = (BinOp) n;
+	    this.check(op.getFirst());
+	    this.check(op.getSecond());	    
 	} else if (n.getClass().getName().equals("laboratorios.lab08.ast.Root")) {
 	    Root r = (Root) n;
 	    for (Node c : r.getChilds()) {
