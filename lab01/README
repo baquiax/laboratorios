@@ -1,0 +1,25 @@
+Estaba viendo que en la descripcion del lab. Se especifica la
+siguiente estructura:
+
+         /lab01
+             Makefile
+             Lab01.java
+             Human.java
+         /teacher
+             Teacher.java
+         /student
+             Student.java
+
+Pero no se yo estoy mal, pero yo la deje al final así:
+
+         /lab01
+             Makefile
+             Lab01.java
+             Human.java
+             /teacher
+		Teacher.java
+             /student
+		Student.java
+
+
+:)
