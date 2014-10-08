@@ -4,6 +4,7 @@ import java.util.List;
 import org.antlr.v4.runtime.tree.TerminalNode;
 import laboratorios.lab09.parser.ParserCalc;
 import laboratorios.lab09.parser.ParserCalcBaseVisitor;
+import laboratorios.lab09.semantic.SymbolTable;
 
 public class AstVisitor extends ParserCalcBaseVisitor<Node> {
     

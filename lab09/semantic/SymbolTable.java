@@ -3,23 +3,19 @@ import java.util.Hashtable;
 import laboratorios.lab09.ast.Node;
 
 public class SymbolTable {
-    private Hashtable<String, Node> definedSymbols;
+    private final static Hashtable<String, Node> definedSymbols = new Hashtable<String, Node>();       
     
-    public SymbolTable() {
-		this.definedSymbols = new Hashtable<String, Node>();
+    public static boolean insertSymbol(String symbol, Node n) {	
+	if (SymbolTable.findSymbol(symbol) != null) {
+	    return false;
+	} else {
+	    SymbolTable.definedSymbols.put(symbol, n);
+	    return true;
+	}
     }
     
-    public boolean insertSymbol(String symbol, Node n) {	
-		if (this.findSymbol(symbol) != null) {
-		    return false;
-		} else {
-		    this.definedSymbols.put(symbol, n);
-		    return true;
-		}
-    }
-    
-    public Node findSymbol(String symbol) {
-		return this.definedSymbols.get(symbol);
+    public static Node findSymbol(String symbol) {
+	return SymbolTable.definedSymbols.get(symbol);
     }
 
 }

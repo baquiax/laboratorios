@@ -28,8 +28,10 @@ public class BinOp extends Node {
         this.type = t;
     }
 
-    public String getType() {
-        if (this.firstOperator.getType().equals(this.secondOperator.getType())) {
+    public String getType() {	
+	if (this.firstOperator.getType().equals("float") || this.secondOperator.getType().equals("float")) {
+	    return "float";
+	} else if (this.firstOperator.getType().equals(this.secondOperator.getType())) {
             return this.firstOperator.getType();
         } else {
             return "error";

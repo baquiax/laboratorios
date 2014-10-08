@@ -1,4 +1,5 @@
 package laboratorios.lab09.ast;
+import laboratorios.lab09.semantic.SymbolTable;
 
 public class VarName extends Node {
     private String value;
@@ -17,10 +18,18 @@ public class VarName extends Node {
     }
 
     public String getType() {
+	if (this.type == null){
+	    VarName v = (VarName)SymbolTable.findSymbol(this.value);
+	    if (v == null) {
+		return "error";
+	    } else {
+		return v.getType();
+	    }
+	}
         return this.type;
     }
 
     public void print(String padding) {
-	   System.out.println(padding + "[" + this.type + "]" + this.value);	
+	System.out.println(padding + this.value);	
     }
 }

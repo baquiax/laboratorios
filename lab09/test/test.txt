@@ -1,5 +1,10 @@
 boolean b;
 int z;
+float f;
 z=1;
-
-b = true & b & false;
+f = z;
+z = f;
+f = 2 + 1 + f;
+b = true & b & false ; 
+b = 1;
+z = true;
